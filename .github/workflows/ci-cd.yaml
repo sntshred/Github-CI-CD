@@ -1,27 +1,19 @@
 name: Continuous Integrations and Deployment
-
-on:
+'on':
   push:
     branches:
       - main
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Check out code 😊😊
-    - uses: actions/checkout@v2
-    
-    - name: Setup .Net 5 ✔
-    - uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: '5.0.x' # SDK Version to use; x will use the latest version of the 3.1 channel
-    
-    - name: Restore dependencies 👌
-      run: dotnet restore
-  
-    - name: Build app 
-      run: dotnet build -c Release  --no-restore
-
-    
-
+      - name: "Check out code \U0001F60A\U0001F60A"
+      - uses: actions/checkout@v2
+      - name: Setup .Net 5 ✔
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.x
+      - name: "Restore dependencies \U0001F44C"
+        run: dotnet restore
+      - name: Build app
+        run: dotnet build -c Release  --no-restore
