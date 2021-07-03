@@ -1,19 +1,15 @@
 name: Continuous Integrations and Deployment
 'on':
   push:
-    branches:
-      - main
+    branches: master
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: "Check out code \U0001F60A\U0001F60A"
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Setup .Net 5 ✔
-      - uses: actions/setup-dotnet@v1
+        uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 5.0.x
-      - name: "Restore dependencies \U0001F44C"
-        run: dotnet restore
-      - name: Build app
-        run: dotnet build -c Release  --no-restore
+      - "name:Restore dependencies \U0001F44C run:dotnet restore"
