@@ -9,8 +9,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
     </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\VS 2019\GItHub_CI_CD\TestProject23\TestProject23.csproj" />
-  </ItemGroup>
-
 </Project>
